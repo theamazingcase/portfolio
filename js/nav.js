@@ -21,16 +21,3 @@ $('#portfolio').click(function() {
 });
 
 });
-
-/*issues: default on bio (css display set)                     √
-          properly clear previous content before transitioning
-          (control flow + .css(display, none))                 √
-          make sure blog link continues to function            √
-          stop href=# repositioning (preventDefault)
-          not working on first click
-          maybe change to button...?                           ~
-          fade in correctly between items (fadeIn)             √
-          script site in header ((doc).ready(func...))         √
-
-
-*/
