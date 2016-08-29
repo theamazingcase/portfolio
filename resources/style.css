@@ -68,12 +68,12 @@ nav {
   nav {
     font-size: 70%; } }
 a {
-  font-weight: 700;
-  color: #333; }
+  color: #333;
+  font-weight: 700; }
 
 :hover {
-  text-decoration: none;
-  color: #666; }
+  color: #666;
+  text-decoration: none; }
 
 p {
   display: inline-block;
@@ -112,8 +112,8 @@ button {
 
 #portrait {
   float: left;
-  width: 40%;
-  padding: 1em 1em; }
+  padding: 1em 1em;
+  width: 40%; }
 
 #portrait img {
   width: 100%; }
@@ -138,8 +138,8 @@ button {
   .portfolio img {
     width: 100px; } }
 .professional {
-  width: 40em;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 40em; }
 
 .professional img {
   padding: 1em 1em; }
@@ -165,8 +165,8 @@ button {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
   justify-content: space-around; }
 
 .personal-item {
@@ -192,8 +192,8 @@ button {
   -moz-transition: opacity .25s ease; }
 
 .personal-item:after {
-  content: '\A';
   background: rgba(0, 0, 0, 0.6);
+  content: '\A';
   height: 100%;
   width: 100%;
   top: 0;
@@ -202,10 +202,10 @@ button {
 .personal-item:before {
   content: attr(data-content);
   color: #fff;
-  text-align: center;
+  position: absolute;
   top: 50%;
   width: 200px;
-  position: absolute;
+  text-align: center;
   z-index: 1; }
 
 @media only screen and (max-width: 600px) {
