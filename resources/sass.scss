@@ -1,0 +1,294 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,700';
+
+$page-width: 50em;
+$portfolio-img-width: 200px;
+$base-color: #555;
+$hover-color: #666;
+
+body {
+  color: $base-color;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0 auto;
+  min-width: 300px;
+}
+
+@media only screen and (max-width: 700px) {
+  body {font-size: 90%}
+}
+
+@media only screen and (max-width: 600px) {
+  body {font-size: 80%}
+}
+
+@media only screen and (max-width: 400px) {
+  body {font-size: 70%}
+}
+
+@media only screen and (max-width: 300px) {
+  body {font-size: 60%}
+}
+
+
+header {
+  background-image: url('img/header.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  white-space: nowrap;
+  line-height: 1.2;
+  max-width: none;
+  padding: 10vw 2em;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: 4em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 350px) {
+  header h1 {font-size: 3em}
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+#main {
+  margin: 0 auto;
+  max-width: $page-width;
+  padding: 0em 1em;
+  overflow: hidden;
+}
+
+nav {
+  margin:0 auto;
+  height: 5em;
+  max-width: 40em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  nav {font-size: 80%}
+}
+
+@media only screen and (max-width: 400px) {
+  nav {font-size: 75%}
+}
+
+@media only screen and (max-width: 375px) {
+  nav {font-size: 70%}
+}
+
+a {
+  font-weight: 700;
+  color: #333;
+}
+
+:hover {
+  text-decoration: none;
+  color: $hover-color;
+}
+
+p {
+  display: inline-block;
+  padding: 1em;
+  margin: 0em;
+}
+
+p span {
+  display: block;
+}
+
+ul {
+  padding: 0em;
+  margin: 0em;
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  display: inline;
+  padding: 0 1em;
+}
+
+button {
+  background-color: inherit;
+  border: 0;
+  cursor: pointer;
+  display: inline;
+  font-size: 2.5em;
+  font-weight: 700;
+  padding: 0em .5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+:hover {
+  color: $hover-color;
+}
+
+
+.bio {
+  display: block;
+}
+
+#portrait {
+  float: left;
+  width: 40%;
+  padding: 1em 1em;
+}
+
+#portrait img {
+  width: 100%;
+}
+
+#bio-text {
+  overflow: hidden;
+}
+
+.portfolio {
+  display: none;
+}
+
+.portfolio div {
+  overflow: hidden;
+}
+
+.portfolio img {
+  float: left;
+  width: $portfolio-img-width;
+}
+
+@media only screen and (max-width: 600px) {
+  .portfolio img {width:125px}
+}
+
+@media only screen and (max-width: 500px) {
+  .portfolio img {width:100px}
+}
+
+.professional {
+  width: 40em;
+  margin: 0 auto;
+}
+
+.professional img {
+  padding: 1em 1em;
+}
+
+.professional p {
+  width: 20em;
+}
+
+#personal h2 {
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#personal a {
+  padding: 1em 0;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.personal-item {
+  position:relative;
+  height:300px;
+  width:$portfolio-img-width;
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .personal-item {
+    height: 150px;
+    width: 100px}
+}
+
+.personal-item img {
+  width:100%;
+  vertical-align:top;
+}
+
+.personal-item:after,
+.personal-item:before {
+  position: absolute;
+  opacity: 0;
+  transition: opacity .25s ease;
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+}
+
+.personal-item:after {
+  content:'\A';
+  background:rgba(0,0,0,0.6);
+  height:100%;
+  width:100%;
+  top: 0;
+  left: 0;
+}
+
+.personal-item:before {
+  content:attr(data-content);
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  width: $portfolio-img-width;
+  position:absolute;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .personal-item:before {
+    height: 150px;
+    width: 100px}
+}
+
+.personal-item:hover:after,
+.personal-item:hover:before {
+  opacity:1;
+}
+
+footer {
+  padding: 2em 0em;
+}
+
+footer ul {
+  line-height: 1em;
+}
+
+footer li a{
+  font-size: 0;
+}
+
+footer img {
+  width: 32px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer img {width: 16px}
+}
